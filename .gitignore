@@ -1,0 +1,18 @@
+deploymenttc-backend/node_modules
+deploymenttc-ui/node_modules
+*.log
+*.tfstate
+
+# Ignore log files
+*.log
+
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Ignore node_modules
+node_modules/
+
+# Ignore temporary files
+*.tmp
+*.bak

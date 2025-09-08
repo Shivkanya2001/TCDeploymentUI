@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Layout hardening ---- */
+html,
+body,
+#root {
+    height: 100%;
+}
+
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+    margin: 0;
+}
+
+/* ---- Custom Scrollbar (light) ---- */
+.scrollbar-light::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.scrollbar-light::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
+
+.scrollbar-light::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full;
+    min-height: 20px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+.scrollbar-light::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400;
+}
+
+/* Firefox */
+.scrollbar-light {
+    scrollbar-width: thin;
+    scrollbar-color: #0d0d0e transparent;
+}
+
+.scrollbar-light:hover {
+    scrollbar-color: #0f0f0f transparent;
+}
+
+/* ---- Sidebar dashed divider ---- */
+.sidebar-dotted {
+    border-right: 1px dashed #cbd5e0;
+}
+
+/* ---- Fullscreen terminal overlay ---- */
+.fullscreen-terminal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+}
