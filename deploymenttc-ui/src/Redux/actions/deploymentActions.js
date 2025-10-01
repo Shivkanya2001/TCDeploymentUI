@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import api from "../api";
-import { DEPLOYMENTFILES } from "../endpoints";
+import api from "../../api";
+import { DEPLOYMENTFILES } from "../../endpoints";
 
 // Fetch files from backend with query param (type)
 export const getArtifactFileFromRepo = createAsyncThunk(
